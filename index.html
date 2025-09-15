@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Primary Meta Tags -->
   <!-- TODO: Replace with your paper title and author names -->
   <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
@@ -15,7 +15,7 @@
   <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <!-- TODO: Replace with your institution or lab name -->
@@ -58,13 +58,13 @@
   <meta name="citation_publication_date" content="2024">
   <meta name="citation_conference_title" content="CONFERENCE_NAME">
   <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
+
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2563eb">
   <meta name="msapplication-TileColor" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
+
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,21 +75,23 @@
 
   <!-- TODO: Replace with your paper title and authors -->
   <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
+
   <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
   <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
+
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
+  <link rel="stylesheet" href="static/css/image-comparison.css">
+  <link rel="stylesheet" href="static/css/model-viewer.css">
+
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
+
   <!-- Fallback for browsers that don't support preload -->
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
@@ -97,10 +99,10 @@
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
+
   <!-- Fonts - Optimized loading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -108,7 +110,10 @@
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
+
+  <!--load model viewer google-->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
@@ -156,13 +161,13 @@
         "name": "RESEARCH_AREA_1"
       },
       {
-        "@type": "Thing", 
+        "@type": "Thing",
         "name": "RESEARCH_AREA_2"
       }
     ]
   }
   </script>
-  
+
   <!-- Website/Organization Structured Data -->
   <script type="application/ld+json">
   {
@@ -274,7 +279,7 @@
                     </span>
 
                     <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -282,7 +287,7 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
@@ -325,7 +330,7 @@
       </video>
       <!-- TODO: Replace with your video description -->
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.
       </h2>
     </div>
   </div>
@@ -349,6 +354,30 @@
   </div>
 </section>
 <!-- End paper abstract -->
+
+
+
+<!-- Paper Method -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <!-- 新增图片容器，图片在文字上方 -->
+        <div class="method-image-container" style="margin-bottom: 24px;">
+          <img src="static/images/carousel1.jpg" alt="Method Illustration" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);" />
+        </div>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper method -->
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper Method -->
 
 
 <!-- Image carousel -->
@@ -399,13 +428,14 @@
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <h2 class="title is-3" style="text-align: center;">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
+
           <div class="publication-video">
             <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+             
+            <iframe src="https://player.bilibili.com/player.html?bvid=BV14yhCzcEw3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -419,7 +449,7 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
+      <h2 class="title is-3" style="text-align: center;">Another Carousel</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
           <!-- TODO: Add poster image for better preview -->
@@ -449,25 +479,102 @@
 <!-- End video carousel -->
 
 
-
-
-
-
 <!-- Paper poster -->
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title">Poster</h2>
+      <h2 class="title is-3" style="text-align: center;">Poster</h2>
 
+      <h2 class="title">Poster</h2>
       <!-- TODO: Replace with your poster PDF -->
       <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
           </iframe>
-        
+
       </div>
     </div>
   </section>
 <!--End paper poster -->
 
+
+
+<!-- image Comparison -->
+<section class="hero is-small is-light" id="image-comparison">
+  <div class="hero-body">
+    <div class="container">
+      <!-- 添加大标题 -->
+      <h2 class="title is-3" style="text-align: center;">Comparisons</h2>
+      <h3 class="title is-4 has-text-weight-bold">DTU</h3>      <!-- 按钮组 -->
+      <div class="cmp-button-group">
+        <button onclick="changeImages(event, 'static/images/carousel1.jpg', 'static/images/carousel1.jpg')" class="cmp-button cmp-btn-checked">scan_37</button>
+        <button onclick="changeImages(event, 'static/images/carousel2.jpg', 'static/images/carousel1.jpg')" class="cmp-button">scan_38</button>
+        <button onclick="changeImages(event, 'static/images/carousel2.jpg', 'static/images/carousel3.jpg')" class="cmp-button">scan_39</button>
+        <button onclick="changeImages(event, 'static/images/carousel2.jpg', 'static/images/carousel3.jpg')" class="cmp-button">scan_40</button>
+      </div>
+
+      <!-- TODO: Replace with your Comparison images -->
+      <div class="image-comparison-wrapper" style="position:relative; width:120%; max-width:1280px; height:640px; margin:auto;">
+        <div class="img background-img">
+          <img src="static/images/carousel1.jpg" class="comparison-img" draggable="false">
+        </div>
+        <div class="img foreground-img">
+          <img src="static/images/carousel2.jpg" class="comparison-img" draggable="false" style="clip-path: inset(0 50% 0 0);">
+        </div>
+        <input type="range" min="0" max="100" value="50" class="slider" name='slider' id="slider">
+        <div class="slider-line"></div>
+        <div class='slider-button'></div>
+      </div>
+    </div>
+    <script defer src="static/js/image-comparison.js"></script>
+  </section>
+<!--End image Comparison -->
+
+<!-- 3D model exhibition -->
+<section class="hero is-small is-light" id="model-exhibition">
+  <div class="hero-body">
+    <h2 class="title is-3" style="text-align: center;">3D model exhibition</h2>
+    <div class="container blog main large gray_linear">
+      <div class="gso30_3d">
+        <!-- 第一个模型 -->
+        <div class="one-class">
+          <p class="caption inline center">PointE</p>
+          <model-viewer
+            src="static/models/point_cloud.glb"
+            camera-controls
+            auto-rotate
+            shadow-intensity="1"
+            exposure="1"
+            style="width:100%;height:300px;"
+          ></model-viewer>
+        </div>
+        <!-- 第二个模型 -->
+        <div class="one-class">
+          <p class="caption inline center">ShapeE</p>
+          <model-viewer
+            src="static/models/point_cloud.glb"
+            camera-controls
+            auto-rotate
+            shadow-intensity="1"
+            exposure="1"
+            style="width:100%;height:300px;"
+          ></model-viewer>
+        </div>
+        <!-- 第三个模型 -->
+        <div class="one-class">
+          <p class="caption inline center">One2345-XL</p>
+          <model-viewer
+            src="static/models/point_cloud.glb"
+            camera-controls
+            auto-rotate
+            shadow-intensity="1"
+            exposure="1"
+            style="width:100%;height:300px;"
+          ></model-viewer>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End 3D model exhibition -->
 
 
 <!--BibTex citation -->
@@ -511,7 +618,7 @@
 </footer>
 
 <!-- Statcounter tracking code -->
-  
+
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
